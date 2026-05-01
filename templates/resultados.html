@@ -22,6 +22,7 @@
                 <th>Altura (m)</th>
                 <th>IMC</th>
                 <th>Classificação</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -33,11 +34,15 @@
                 <td>{{ calc['nome'] }}</td>
                 <td>{{ calc['peso'] }}</td>
                 <td>{{ calc['altura'] }}</td>
-                <td>{{ calc['imc'] }}</td> 
+                <td>{{ imc }}</td>
                 <td>
                     <span class="badge bg-success">
                         {{ classificacao(imc) }}
                     </span>
+                </td>
+                <td>
+                    <a href="{{ url_for('editar_imc', id=calc['id_calculo']) }}" 
+                    class="btn btn-sm btn-warning">Editar</a>
                 </td>
             </tr>
             {% endfor %}

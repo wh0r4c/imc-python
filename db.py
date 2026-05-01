@@ -19,7 +19,7 @@ _DB_PARAMS = {
 # Pool criado uma única vez quando o módulo é carregado pela primeira vez.
 # conn.close() devolve a conexão ao pool — não fecha fisicamente.
 _pool = pooling.MySQLConnectionPool(
-    pool_name='webapp_pool',
+    pool_name='imc_pool',
     pool_size=5,           # conexões abertas permanentemente
     pool_reset_session=True,
     **_DB_PARAMS
